@@ -7,18 +7,18 @@ import com.jvirdi.solitaire.datatype.Card;
 
 public class Deck {
 
-	private final List<Card> cards;
+  private final List<Card> cards;
 
-	public Deck(){
-		this.cards= new ArrayList<Card>();
-	}
+  public Deck() {
+    this.cards = new ArrayList<Card>();
+  }
 
-	public void addCard(Card card) {
-		cards.add(0,card);
-	}
+  public void addCard(Card card) {
+    cards.add(0, card);
+  }
 
-	public Card drawCard() {
-		return cards.get(0);
-	}
+  public Card drawCard() {
+    return cards.get(0);
+  }
 
 }

@@ -1,28 +1,29 @@
 package com.jvirdi.solitaire.datatype;
 
 public enum Suit {
-	
-	SPADES("Spades", Color.BLACK), HEARTS("Hearts",Color.RED), CLUBS("Clubs",Color.BLACK);
 
-	private final Color color;
-	private final String value;
+  SPADES("Spades", Color.BLACK), HEARTS("Hearts", Color.RED), CLUBS("Clubs",
+      Color.BLACK), DIAMONDS("Diamonds", Color.RED);
 
-	Suit(String value ,Color color){
-		
-		this.color= color;
-		this.value= value;
-	}
-	
-	public Color getColor() {
-		
-		return color;
-	}
+  private final Color color;
+  private final String value;
 
-	public String getValue() {
-		return value;
-	}
-	
-	
+  Suit(String value, Color color) {
+
+    this.color = color;
+    this.value = value;
+  }
+
+  public Color getColor() {
+
+    return color;
+  }
+
+  public String getValue() {
+    return value;
+  }
+
+
 }
 
 
