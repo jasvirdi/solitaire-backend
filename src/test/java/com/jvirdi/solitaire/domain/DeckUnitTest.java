@@ -7,21 +7,26 @@ import com.jvirdi.solitaire.datatype.Card;
 import com.jvirdi.solitaire.datatype.Rank;
 import com.jvirdi.solitaire.datatype.Suit;
 
-
 public class DeckUnitTest {
 
-  @Test
-  public void whenDrawIsCalledTheTopCardIsDrawn() {
-    Deck deck = new Deck();
+	@Test
+	public void standardDeckHas52Cards() {
+		Deck deck = new Deck();
+		Assert.assertEquals(52, deck.size());
+	}
 
-    Card aceOfClubs = new Card(Rank.ACE, Suit.CLUBS);
-    Card tenOfHearts = new Card(Rank.TEN, Suit.HEARTS);
+	@Test
+	public void whenDrawIsCalledTheTopCardIsDrawn() {
+		Deck deck = new Deck();
 
-    deck.addCard(aceOfClubs);
-    deck.addCard(tenOfHearts);
+		Card aceOfClubs = new Card(Rank.ACE, Suit.CLUBS);
+		Card tenOfHearts = new Card(Rank.TEN, Suit.HEARTS);
 
-    Assert.assertEquals(tenOfHearts, deck.drawCard());
+		deck.addCard(aceOfClubs);
+		deck.addCard(tenOfHearts);
 
-  }
+		Assert.assertEquals(tenOfHearts, deck.drawCard());
+
+	}
 
 }
