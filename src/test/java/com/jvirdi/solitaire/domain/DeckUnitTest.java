@@ -9,24 +9,24 @@ import com.jvirdi.solitaire.datatype.Suit;
 
 public class DeckUnitTest {
 
-	@Test
-	public void standardDeckHas52Cards() {
-		Deck deck = new Deck();
-		Assert.assertEquals(52, deck.size());
-	}
+  @Test
+  public void standardDeckHas52Cards() {
+    Deck deck = new Deck();
+    Assert.assertEquals(52, deck.size());
+  }
 
-	@Test
-	public void whenDrawIsCalledTheTopCardIsDrawn() {
-		Deck deck = new Deck();
+  @Test
+  public void whenDrawIsCalledTheTopCardIsDrawn() {
+    Deck deck = new Deck();
 
-		Card aceOfClubs = new Card(Rank.ACE, Suit.CLUBS);
-		Card tenOfHearts = new Card(Rank.TEN, Suit.HEARTS);
+    Card aceOfClubs = new Card(Rank.ACE, Suit.CLUBS);
+    Card tenOfHearts = new Card(Rank.TEN, Suit.HEARTS);
 
-		deck.addCard(aceOfClubs);
-		deck.addCard(tenOfHearts);
+    deck.addCard(aceOfClubs);
+    deck.addCard(tenOfHearts);
 
-		Assert.assertEquals(tenOfHearts, deck.drawCard());
+    Assert.assertEquals(tenOfHearts, deck.drawCard());
 
-	}
+  }
 
 }

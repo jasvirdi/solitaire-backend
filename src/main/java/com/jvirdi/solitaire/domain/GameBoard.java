@@ -9,27 +9,27 @@ import com.jvirdi.solitaire.datatype.Pile;
 
 public class GameBoard {
 
-	private Map<Location, Pile> piles;
+  private Map<Location, Pile> piles;
 
-	public GameBoard() {
+  public GameBoard() {
 
-		piles = new HashMap<>();
+    piles = new HashMap<>();
 
-		for (Location location : Location.values()) {
-			piles.put(location, new Pile());
-		}
+    for (Location location : Location.values()) {
+      piles.put(location, new Pile());
+    }
 
-	}
+  }
 
-	public void addCard(Location location, Card card) {
+  public void addCard(Location location, Card card) {
 
-		piles.get(location).addCard(card);
+    piles.get(location).addCard(card);
 
-	}
+  }
 
-	public Pile getPile(Location location) {
+  public Pile getPile(Location location) {
 
-		return piles.get(location);
-	}
+    return piles.get(location);
+  }
 
 }

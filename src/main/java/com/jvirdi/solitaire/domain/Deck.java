@@ -9,40 +9,40 @@ import com.jvirdi.solitaire.datatype.Suit;
 
 public class Deck {
 
-	private final List<Card> cards;
+  private final List<Card> cards;
 
-	public Deck() {
-		this.cards = new ArrayList<Card>();
+  public Deck() {
+    this.cards = new ArrayList<Card>();
 
-		for (Suit suit : Suit.values()) {
-			for (Rank rank : Rank.values()) {
-				addCard(new Card(rank, suit));
-			}
-		}
+    for (Suit suit : Suit.values()) {
+      for (Rank rank : Rank.values()) {
+        addCard(new Card(rank, suit));
+      }
+    }
 
-	}
+  }
 
-	public void addCard(Card card) {
-		cards.add(0, card);
-	}
+  public void addCard(Card card) {
+    cards.add(0, card);
+  }
 
-	public Card drawCard() {
+  public Card drawCard() {
 
-		return cards.remove(0);
-	}
+    return cards.remove(0);
+  }
 
-	public int size() {
+  public int size() {
 
-		return cards.size();
-	}
+    return cards.size();
+  }
 
-	public Card drawBottomCard() {
+  public Card drawBottomCard() {
 
-		if (size() > 0) {
-			return cards.remove(size() - 1);
-		}
+    if (size() > 0) {
+      return cards.remove(size() - 1);
+    }
 
-		return null;
-	}
+    return null;
+  }
 
 }

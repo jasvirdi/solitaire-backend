@@ -5,33 +5,33 @@ import java.util.List;
 
 public class Pile {
 
-	private List<Card> cards;
+  private List<Card> cards;
 
-	public Pile() {
+  public Pile() {
 
-		cards = new ArrayList<>();
+    cards = new ArrayList<>();
 
-	}
+  }
 
-	public void addCard(Card card) {
+  public void addCard(Card card) {
 
-		if (cards.contains(card)) {
+    if (cards.contains(card)) {
 
-			throw new DuplicateCardReferenceException("Duplicate Cards are not allowed");
+      throw new DuplicateCardReferenceException("Duplicate Cards are not allowed");
 
-		}
-		cards.add(card);
+    }
+    cards.add(card);
 
-	}
+  }
 
-	public Card getCard(int index) {
+  public Card getCard(int index) {
 
-		return cards.get(index);
+    return cards.get(index);
 
-	}
+  }
 
-	public int size() {
-		return cards.size();
-	}
+  public int size() {
+    return cards.size();
+  }
 
 }

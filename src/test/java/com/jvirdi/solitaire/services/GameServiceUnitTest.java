@@ -8,16 +8,16 @@ import com.jvirdi.solitaire.domain.GameBoard;
 
 public class GameServiceUnitTest {
 
-	@Test
-	public void gameServiceReturnAFullyConstructedBoard() {
+  @Test
+  public void gameServiceReturnAFullyConstructedBoard() {
 
-		GameService gameService = new GameService();
+    GameService gameService = new GameService();
 
-		Deck deck = new Deck();
+    Deck deck = new Deck();
 
-		GameBoard gameBoard = gameService.dealSolitaire(deck);
-		Assert.assertEquals(0, deck.size());
+    GameBoard gameBoard = gameService.dealSolitaire(deck);
+    Assert.assertEquals(0, deck.size());
 
-	}
+  }
 
 }

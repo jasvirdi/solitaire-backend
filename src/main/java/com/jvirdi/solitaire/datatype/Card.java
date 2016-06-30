@@ -2,49 +2,49 @@ package com.jvirdi.solitaire.datatype;
 
 public class Card {
 
-	private final Rank rank;
-	private final Suit suit;
-	private CardState cardState;
+  private final Rank rank;
+  private final Suit suit;
+  private CardState cardState;
 
-	public Card(Rank rank, Suit suit) {
-		this(rank, suit, CardState.FACE_DOWN);
-	}
+  public Card(Rank rank, Suit suit) {
+    this(rank, suit, CardState.FACE_DOWN);
+  }
 
-	public Card(Rank rank, Suit suit, CardState cardState) {
-		this.rank = rank;
-		this.suit = suit;
-		this.cardState = cardState;
-	}
+  public Card(Rank rank, Suit suit, CardState cardState) {
+    this.rank = rank;
+    this.suit = suit;
+    this.cardState = cardState;
+  }
 
-	public String getFullName() {
+  public String getFullName() {
 
-		return getRank().getShortName() + " of " + getSuit().getValue();
-	}
+    return getRank().getShortName() + " of " + getSuit().getValue();
+  }
 
-	public Suit getSuit() {
+  public Suit getSuit() {
 
-		return suit;
-	}
+    return suit;
+  }
 
-	public Rank getRank() {
-		return rank;
-	}
+  public Rank getRank() {
+    return rank;
+  }
 
-	public CardState getCardState() {
-		return cardState;
-	}
+  public CardState getCardState() {
+    return cardState;
+  }
 
-	public void turnFaceDown() {
-		this.cardState = CardState.FACE_DOWN;
-	}
+  public void turnFaceDown() {
+    this.cardState = CardState.FACE_DOWN;
+  }
 
-	public void turnFaceUp() {
-		this.cardState = CardState.FACE_UP;
-	}
+  public void turnFaceUp() {
+    this.cardState = CardState.FACE_UP;
+  }
 
-	public boolean isFaceUp() {
+  public boolean isFaceUp() {
 
-		return getCardState() == CardState.FACE_UP;
+    return getCardState() == CardState.FACE_UP;
 
-	}
+  }
 }
