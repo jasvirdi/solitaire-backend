@@ -1,5 +1,7 @@
 package com.jvirdi.solitaire.datatype;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 public class Card {
 
   private final Rank rank;
@@ -10,6 +12,7 @@ public class Card {
     this(rank, suit, CardState.FACE_DOWN);
   }
 
+  @JsonCreator
   public Card(Rank rank, Suit suit, CardState cardState) {
     this.rank = rank;
     this.suit = suit;

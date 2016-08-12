@@ -3,12 +3,14 @@ package com.jvirdi.solitaire.domain;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jvirdi.solitaire.datatype.Card;
 import com.jvirdi.solitaire.datatype.Location;
 import com.jvirdi.solitaire.datatype.Pile;
 
 public class GameBoard {
 
+	@JsonProperty
   private Map<Location, Pile> piles;
 
   public GameBoard() {

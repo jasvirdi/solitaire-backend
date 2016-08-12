@@ -3,8 +3,11 @@ package com.jvirdi.solitaire.datatype;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Pile {
 
+	@JsonProperty
   private List<Card> cards;
 
   public Pile() {
